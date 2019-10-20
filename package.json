@@ -18,7 +18,7 @@
     "html"
   ],
   "author": "Alex van Steenhoven",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AlexVanSteenhoven/chat-app/issues"
   },
