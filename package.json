@@ -2,9 +2,11 @@
   "name": "mychat",
   "version": "0.1.0",
   "description": "A chat application with Socket.io and Express",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint server/*.js --fix",
+    "dev": "nodemon server/server.js --exec \"npm run lint && node\"",
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,22 @@
   "bugs": {
     "url": "https://github.com/AlexVanSteenhoven/chat-app/issues"
   },
-  "homepage": "https://github.com/AlexVanSteenhoven/chat-app#readme"
+  "homepage": "https://github.com/AlexVanSteenhoven/chat-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "@ljharb/eslint-config": "^14.1.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "prettier": "^1.18.2"
+  }
 }
