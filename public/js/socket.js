@@ -10,12 +10,21 @@ socket.on('disconnect', function () {
 });
 
 socket.on('newMessage', function (message) {
-  console.log("newMessage", message)
+  console.log("newMessage", message);
+  // Create a <li> tag and append it on the body
+  let li = document.createElement('li');
+  li.innerText = `${message.from}: ${message.text}`;
+  document.querySelector('body').appendChild(li);
 });
 
-socket.emit('createMessage', {
-  from: 'Alex',
-  text: 'Some text in here'
-}, function () {
-  console.log('Server received a message');
+// Prevent default button action (no-refresh)
+const send_btn = document.querySelector('#submit-btn');
+send_btn.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Send the message entered in the input
+  socket.emit('createMessage', {
+    from: "User",
+    text: document.querySelector('input[name="message"]').value
+  })
 });

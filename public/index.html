@@ -3,14 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Chat room</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="css/material-icons.min.css">
 </head>
 <body>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur dolor doloremque dolores doloribus
-    dolorum inventore maiores nisi nostrum omnis quisquam sunt, velit veritatis.
-    Minus molestias quis suscipit tenetur voluptas.
-  </p>
+  <div id="wrapper">
+    <!-- sidebar -->
+    <!-- Create the menu toggle icon -->
+    <span class="slide">
+      <a href="#" onclick="openMenu()">
+        <i class="mdi mdi-menu"></i>
+      </a>
+    </span>
 
+    <div id="menu" class="nav">
+      <a href="#" class="close" onclick="closeMenu()">
+        <i class="mdi mdi-close"></i>
+      </a>
+<!--      <span id="con_user">Connected Users:</span>-->
+    </div>
+
+    <!-- Content goes here -->
+    <form id="message-form">
+      <input type="text" name="message" placeholder="Enter your message here..." required aria-required="true">
+      <button type="submit" class="btn btn-info bmd-btn-fab" id="submit-btn">
+        <i class="mdi mdi-send"> </i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Import scripts -->
+  <script src="js/main.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/socket.js"></script>
 </body>

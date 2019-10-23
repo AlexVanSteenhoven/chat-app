@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #34495e;
+  opacity: 0.8;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.7s;
+}
+
+.nav span {
+  display: block;
+  padding-left: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #bdc3c7;
+}
+
+.nav .close {
+  position: absolute;
+  top: 26px;
+  right: 22px;
+  margin-left: 50px;
+  font-size: 30px;
+  color: #bdc3c7;
+}
+
+.slide a {
+  color: #000;
+  font-size: 36px;
+}
+
+#wrapper {
+  padding: 20px;
+  transition: margin-left 0.7s;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Remove bullets from the LI tag */
+li {
+  list-style-type: none;
+}
