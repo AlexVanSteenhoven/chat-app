@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server/server.js",
     "test": "mocha server/**/*.test.js",
-    "dev": "nodemon --exec \"npm test\""
+    "dev": "nodemon --exec \"npm test\"",
+    "devServer": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",

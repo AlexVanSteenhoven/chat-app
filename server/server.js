@@ -4,6 +4,9 @@ const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
 
+// Import custom functions
+const { genMessage } = require('./utils/message');
+
 // Create the server
 let app = express();
 let server = http.createServer(app);
@@ -19,27 +22,15 @@ io.on('connection', socket => {
 
   // Join message
   // For newly joined user
-  socket.emit('newMessage', {
-    from: '[Broadcaster]',
-    text: 'Welcome to the chatroom!',
-    createdAt: new Date().getTime()
-  });
+  socket.emit('newMessage', genMessage('Admin', 'Welcome to the chatroom!'));
 
   // For existing users
-  socket.broadcast.emit('newMessage', {
-    from: '[Broadcaster]',
-    text: 'New user joined',
-    createdAt: new Date().getTime()
-  });
+  socket.broadcast.emit('newMessage', genMessage('Admin', 'New user joined the chat'));
 
   // Create a new message
   socket.on('createMessage', message => {
     console.log('createMessage', message);
-    io.emit('newMessage', {
-      from: message.from,
-      text: message.text,
-      createdAt: new Date().getTime()
-    });
+    io.emit('newMessage', genMessage(message.from, message.text));
   });
 
   socket.on('disconnect', () => {
