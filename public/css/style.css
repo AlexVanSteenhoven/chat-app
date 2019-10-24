@@ -12,7 +12,7 @@ body {
   top: 0;
   left: 0;
   background-color: #34495e;
-  opacity: 0.8;
+  opacity: 1;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.7s;
@@ -37,11 +37,11 @@ body {
 
 .slide a {
   color: #000;
-  font-size: 36px;
+  font-size: 48px;
+  padding: 20px;
 }
 
 #wrapper {
-  padding: 20px;
   transition: margin-left 0.7s;
   overflow: hidden;
   width: 100%;
@@ -50,4 +50,27 @@ body {
 /* Remove bullets from the LI tag */
 li {
   list-style-type: none;
+  padding-left: 10px;
+  padding-top: 10px;
 }
+
+#message-form {
+  width: 600px;
+  position: relative;
+  left: calc(50% - 300px);
+  margin-top: 15px;
+  overflow-y: scroll;
+}
+
+#display-messages {
+  top: -20px;
+  color: black;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  height: 80vh;
+  width: 60vw;
+  position: relative;
+  left: calc(50% - 30vw);
+}
+
+

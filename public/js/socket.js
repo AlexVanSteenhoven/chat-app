@@ -14,7 +14,7 @@ socket.on('newMessage', function (message) {
   // Create a <li> tag and append it on the body
   let li = document.createElement('li');
   li.innerText = `${message.from}: ${message.text}`;
-  document.querySelector('body').appendChild(li);
+  document.querySelector('#display-messages').appendChild(li);
 });
 
 // Prevent default button action (no-refresh)

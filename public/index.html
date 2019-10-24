@@ -21,15 +21,17 @@
       <a href="#" class="close" onclick="closeMenu()">
         <i class="mdi mdi-close"></i>
       </a>
-<!--      <span id="con_user">Connected Users:</span>-->
     </div>
 
     <!-- Content goes here -->
+    <div id="display-messages"></div>
     <form id="message-form">
-      <input type="text" name="message" placeholder="Enter your message here..." required aria-required="true">
-      <button type="submit" class="btn btn-info bmd-btn-fab" id="submit-btn">
-        <i class="mdi mdi-send"> </i>
-      </button>
+      <div class="input-group">
+        <input class="form-control in" type="text" name="message" placeholder="Enter your message here..." required aria-required="true">
+        <button type="submit" class="btn btn-info bmd-btn-fab" id="submit-btn">
+          <i class="mdi mdi-send"> </i>
+        </button>
+      </div>
     </form>
   </div>
 
