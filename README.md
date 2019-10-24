@@ -5,7 +5,7 @@ This is a webapplicaton based on [Express](https://www.npmjs.com/package/express
 - Create a username
 - Join / create a room
 - send messages
-- send your location (need to accept it first on chrome to allow your device to use your location)
+- send your location (need to accept it first on chrome to allow your device to use your location) (in the next version)
 - see who is in the same channel
 - see how late the message was send
 
