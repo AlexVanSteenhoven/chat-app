@@ -24,7 +24,9 @@
     </div>
 
     <!-- Content goes here -->
-    <div id="display-messages"></div>
+    <div id="display-messages">
+      <ol id="messages"></ol>
+    </div>
     <form id="message-form">
       <div class="input-group">
         <input class="form-control in" type="text" name="message" placeholder="Enter your message here..." required aria-required="true">
@@ -35,9 +37,26 @@
     </form>
   </div>
 
+  <!-- Create a template -->
+  <script id="message" type="text/template">
+    <li class="message">
+      <div class="message__title">
+        <h4>{{from}}</h4>
+        <span>{{createdAt}}</span>
+      </div>
+      <div class="message__body">
+        <p>{{text}}</p>
+      </div>
+      <hr>
+    </li>
+  </script>
+
   <!-- Import scripts -->
+  <script src="js/mustache.min.js"></script>
   <script src="js/main.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/socket.js"></script>
+  <script src="js/moment.js"></script>
+
 </body>
 </html>

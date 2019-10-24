@@ -10,11 +10,18 @@ socket.on('disconnect', function () {
 });
 
 socket.on('newMessage', function (message) {
-  console.log("newMessage", message);
-  // Create a <li> tag and append it on the body
-  let li = document.createElement('li');
-  li.innerText = `${message.from}: ${message.text}`;
-  document.querySelector('#display-messages').appendChild(li);
+  const formattedTime = moment(message.createdAt).format('HH:mm');
+  const template = document.querySelector('#message').innerHTML;
+  const html = Mustache.render(template, {
+    from: message.from,
+    text: message.text,
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html;
+  document.querySelector('#messages').appendChild(div);
+
 });
 
 // Prevent default button action (no-refresh)

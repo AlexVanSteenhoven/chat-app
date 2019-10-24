@@ -47,11 +47,18 @@ body {
   width: 100%;
 }
 
-/* Remove bullets from the LI tag */
 li {
   list-style-type: none;
-  padding-left: 10px;
-  padding-top: 10px;
+  position: relative;
+  left: -20px;
+  padding-top: 15px;
+}
+
+#messages {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: 79.5vh;
+  width: 59.7vw;
 }
 
 #message-form {
@@ -73,4 +80,21 @@ li {
   left: calc(50% - 30vw);
 }
 
+.message {
+  padding: 10px
+}
 
+.message__title {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.message__title h4 {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.message__title span {
+  color: #999;
+  margin-top: 4px;
+}
