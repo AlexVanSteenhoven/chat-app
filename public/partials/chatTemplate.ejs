@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="../css/material-icons.min.css">
+  </head>
+  <body>
+  <!-- Create a template -->
+  <script src="../js/libs/mustache.min.js"></script>
+  <script id="message" type="text/template">
+    <li class="message">
+      <div class="message__title">
+        <h4>{{from}}</h4>
+        <span>{{createdAt}}</span>
+      </div>
+      <div class="message__body">
+        <p>{{text}}</p>
+      </div>
+      <hr>
+    </li>
+  </script>
+  </body>
+</html>

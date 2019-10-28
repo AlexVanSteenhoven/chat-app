@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat room</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="css/material-icons.min.css">
+</head>
+<body>
+  <div id="wrapper">
+    <% include partials/nav.ejs %>
+    <!-- Content goes here -->
+    <div id="display-messages">
+      <ol id="messages"></ol>
+    </div>
+
+    <% include partials/chatTemplate.ejs %>
+
+    <form id="message-form">
+      <div class="input-group">
+        <input autofocus class="form-control in" type="text" name="message" placeholder="Enter your message here..." required aria-required="true">
+        <button type="submit" class="btn btn-info bmd-btn-fab" id="submit-btn">
+          <i class="mdi mdi-send"> </i>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Import scripts -->
+  <script src="js/main.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/socket.js"></script>
+  <script src="js/libs/moment.js"></script>
+
+</body>
+</html>

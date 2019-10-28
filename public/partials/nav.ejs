@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="../css/material-icons.min.css">
+  </head>
+  <body>
+  <!-- sidebar -->
+  <!-- Create the menu toggle icon -->
+  <span class="slide">
+    <a href="#" onclick="openMenu()">
+      <i class="mdi mdi-menu"></i>
+    </a>
+  </span>
+
+  <div id="menu" class="nav">
+    <a href="#" class="close" onclick="closeMenu()">
+      <i class="mdi mdi-close"></i>
+    </a>
+    <span id="toggleSettings" onclick="openSettings()">
+      <i class="mdi mdi-settings settings-toggle"></i>
+    </span>
+    <div id="settings">
+      <div class="modal-content">
+        <i class="mdi mdi-close close" onclick="closeSettings()"></i>
+        <p>text</p>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </div>
+  </body>
+</html>
