@@ -1,7 +1,6 @@
 /* Import partials css */
 @import url('partials/form.css');
 @import url('partials/nav.css');
-@import url('partials/settings.css');
 
 body {
   padding: 0;

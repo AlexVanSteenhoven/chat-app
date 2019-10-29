@@ -14,22 +14,3 @@ function closeMenu() {
   span.parentNode.removeChild(span);
   document.getElementById('toggleSettings').style.display = 'none';
 }
-
-// Settings modal popup
-
-function openSettings() {
-  let settings = document.getElementById('settings');
-  settings.style.display = "block";
-}
-
-function closeSettings() {
-  let settings = document.getElementById('settings');
-  settings.style.display = "none";
-}
-
-window.onclick = function(event) {
-  let settings = document.getElementById('settings');
-  if (event.target === settings) {
-    settings.style.display = "none";
-  }
-};
