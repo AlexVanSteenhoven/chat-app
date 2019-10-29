@@ -1,5 +1,10 @@
 let socket = io();
 
+function autoscroll() {
+  let messages = document.querySelector('#messages').lastElementChild;
+  messages.scrollIntoView();
+}
+
 socket.on('connect', function () {
   console.log('Connected to server');
 
@@ -21,7 +26,7 @@ socket.on('newMessage', function (message) {
   const div = document.createElement('div');
   div.innerHTML = html;
   document.querySelector('#messages').appendChild(div);
-
+  autoscroll();
 });
 
 // Prevent default button action (no-refresh)
