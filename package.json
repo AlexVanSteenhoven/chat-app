@@ -4,10 +4,10 @@
   "description": "A chat application with Socket.io and Express",
   "main": "server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server.js",
     "test": "mocha server/**/*.test.js",
     "dev": "nodemon --exec \"npm test\"",
-    "devServer": "nodemon server/server.js"
+    "devServer": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,16 @@
   },
   "homepage": "https://github.com/AlexVanSteenhoven/chat-app#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
     "moment": "^2.24.0",
+    "mongoose": "^5.7.7",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {

@@ -14,14 +14,16 @@ let server = http.createServer(app);
 let io = socketIO(server).sockets;
 
 // Set static path
-const publicPath = path.join(__dirname, '/../public');
+const publicPath = path.join(__dirname, '/public');
 app.use(express.static(publicPath));
 
 // Set view engine
 app.set('view engine', 'ejs');
-app.get('/', (req, res) => {
-  res.render('../public/index.ejs');
-});
+
+// Use Routes
+app.use('/', require('./routes/index'));
+app.use('/u', require('./routes/users'));
+app.use('/chat', require('./routes/chat'));
 
 io.on('connection', socket => {
   console.log('A new user just connected');

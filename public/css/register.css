@@ -1,0 +1,38 @@
+.container {
+  margin-top: 30px;
+
+}
+
+.actions {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.header {
+  margin-bottom: 15px;
+  grid-area: head;
+  text-align: center;
+}
+.form {
+  grid-area: form;
+  padding: 50px;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+}
+
+.row {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+  ". head head head head head ."
+  ". form form form form form .";
+}
