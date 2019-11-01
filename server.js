@@ -3,6 +3,16 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
+const expressLayouts = require('express-ejs-layouts');
+
+// Add in the database
+const mongoose = require('mongoose');
+
+// Config Database
+const db = require('./config/keys').MongoURI;
+mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('[Database] is running on port 27017'))
+    .catch(err => console.log(err));
 
 // Import custom functions
 const { genMessage } = require('./utils/message');
@@ -18,7 +28,12 @@ const publicPath = path.join(__dirname, '/public');
 app.use(express.static(publicPath));
 
 // Set view engine
+app.use(expressLayouts);
 app.set('view engine', 'ejs');
+
+// Express middleware (use body-parser)
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Use Routes
 app.use('/', require('./routes/index'));

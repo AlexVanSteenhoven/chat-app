@@ -10,8 +10,10 @@ router.get('/register', (req, res) => {
   res.render('register.ejs');
 });
 
+// Handle registration
 router.post('/register', (req, res) => {
-  res.render('register.ejs');
+  console.log(req.body);
+  res.send('HELLOO');
 });
 
 module.exports = router;

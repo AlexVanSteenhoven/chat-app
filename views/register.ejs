@@ -1,67 +1,65 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="/css/register.css">
-        <link rel="stylesheet" href="/css/bootstrap-material-design.min.css">
-        <link rel="stylesheet" href="/css/material-icons.min.css">
+
         <title>Chat || Register</title>
     </head>
     <body>
         <div class="container">
             <h1 class="header">Register</h1>
-            <form action="/register" method="post" class="form">
+            <form action="/u/register" method="post" class="form">
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="inputFirst">First Name:</label>
-                        <input type="text" class="form-control" id="inputFirst" placeholder="John">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" class="form-control" name="firstname" id="firstname" placeholder="John">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputLast">Last Name:</label>
-                        <input type="text" class="form-control" id="inputLast" placeholder="Doe">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Doe">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="inputEmail">Email:</label>
-                        <input type="text" class="form-control" id="inputEmail" placeholder="johndoe@example.com">
+                        <label for="email">Email:</label>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="johndoe@example.com">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputUsername">Username:</label>
-                        <input type="text" class="form-control" id="inputUsername" placeholder="DoeJohn123">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="DoeJohn123">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="inputPass">Password:</label>
-                        <input type="password" class="form-control" id="inputPass">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" name="password" id="password">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputRepeatPass">Repeat password::</label>
-                        <input type="password" class="form-control" id="inputRepeatPass">
+                        <input type="password" class="form-control" name="repeatPass" id="inputRepeatPass">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="inputAddress">Address:</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Hoofdstraat 32">
+                    <label for="address">Address:</label>
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Hoofdstraat 32">
                 </div>
 
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="inputCity">City:</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="Amsterdam">
+                        <label for="city">City:</label>
+                        <input type="text" class="form-control" name="city" id="city" placeholder="Amsterdam">
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="inputZip">Zip:</label>
-                        <input type="text" class="form-control" id="inputZip" placeholder="9999AA">
+                        <label for="zip">Zip:</label>
+                        <input type="text" class="form-control" name="zip" id="zip" placeholder="9999AA">
                     </div>
                 </div>
                 <div class="form-group actions">
                     <button type="submit" class="btn btn-raised btn-info registerBTN">Register</button>
-                    <p class="account">Already an account? <a href="/login">Log in here!</a></p>
+                    <p class="account">Already an account? <a href="/u/login">Log in here!</a></p>
                 </div>
             </form>
         </div>
